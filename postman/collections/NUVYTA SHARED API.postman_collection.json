@@ -1,0 +1,118 @@
+{
+  "info": {
+    "_postman_id": "9d8ddf65-4c09-43a4-9b3d-2d3adcbeaf11",
+    "name": "NUVYTA SHARED API",
+    "description": "# 🐝 NUVYTA SHARED API v. 0.0.1\n\n## Changelog\n\n### v. 0.0.1\n\n\\-First implementation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "FHIR API",
+      "item": [
+        {
+          "name": "BASIC",
+          "item": [
+            {
+              "name": "GET",
+              "id": "8ba96eda-df9c-4a28-a4d4-e6af1e0edad2",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{fhir_api_url}}Basic",
+                  "host": [
+                    "{{fhir_api_url}}Basic"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "id": "b56af0b5-165f-4065-9713-e2344c491987"
+        }
+      ],
+      "id": "f9430b65-08d7-4b58-8873-b3fb8deb5bb6"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "refreshTokenUrl",
+        "value": "{{oauth_token_url}}",
+        "type": "string"
+      },
+      {
+        "key": "state",
+        "value": "123",
+        "type": "string"
+      },
+      {
+        "key": "scope",
+        "value": "{{oauth_scope}}",
+        "type": "string"
+      },
+      {
+        "key": "clientId",
+        "value": "{{oauth_client_id}}",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "{{oauth_token_url}}",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "{{oauth_auth_url}}",
+        "type": "string"
+      },
+      {
+        "key": "useBrowser",
+        "value": true,
+        "type": "boolean"
+      },
+      {
+        "key": "redirect_uri",
+        "value": "{{oauth_callback_url}}",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code_with_pkce",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "0ea4e4cf-6e7d-4f1a-9837-e6d20d77fbca",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "3ba7d2bc-cdbf-400f-8e2a-f94d8be39078",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
